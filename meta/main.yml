@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Anarcho-Tech NYC
+  description: Manage filesystem disk quotas on ext3, ext4, or xfs filesystems.
+  company: Eat The Rich, Inc.
+
+  license: AGPL-3.0-or-later # SPDX tag from https://spdx.org/licenses/
+
+  min_ansible_version: 2.9
+
+  # platforms:
+  # - name: Fedora
+  #   versions:
+  #   - all
+  #   - 25
+  # - name: SomePlatform
+  #   versions:
+  #   - all
+  #   - 1.0
+  #   - 7
+  #   - 99.99

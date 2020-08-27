@@ -1,0 +1,20 @@
+---
+- name: Prepare
+  hosts: all
+  become: true
+
+  handlers:
+    - name: Reboot.
+      reboot:
+
+  tasks:
+    - name: Ensure quota support is available in Linux kernel.
+      package:
+        name: linux-generic
+        state: present
+      notify: Reboot.
+
+    - name: Create test user.
+      user:
+        name: quotauser
+        comment: User for testing enforcement of disk quotas.

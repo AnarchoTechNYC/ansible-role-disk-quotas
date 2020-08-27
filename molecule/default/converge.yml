@@ -1,0 +1,12 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-role-disk-quotas"
+      include_role:
+        name: "ansible-role-disk-quotas"
+      vars:
+        disk_quotas_users:
+          - name: quotauser
+            block_hard: 50M
+            filesystem: /
